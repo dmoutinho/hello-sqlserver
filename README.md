@@ -3,7 +3,7 @@
 #### Run [Microsoft SQL Server](https://hub.docker.com/_/microsoft-mssql-server) Docker Image 
 
 ```sh
-$ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Password@' -e 'MSSQL_PID=Developer' -p 1433:1433 -d dmoutinho/sqlserver
+$ docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_PID=Developer' -p 1433:1433 -d dmoutinho/sqlserver
 ```
 #### Check container_id
 
@@ -14,7 +14,7 @@ $ docker ps -a
 #### Test SQL Server Docker Image
 
 ```sh
-$ docker exec -it <container_id|container_name> /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Password@ 
+$ docker exec -it <container_id|container_name> /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Test@ndo 
 ```
 
 #### [SQL Test](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017&pivots=cs1-bash)
